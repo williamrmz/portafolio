@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+/* NAVEGADOR GENERAL */
+nav {
+	background: #222;
+	padding: 5px 20px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.logo a:hover {
+	text-decoration: none;
+}
+.menu li {
+	font-size: 16px;
+	padding: 15px 5px;
+	white-space: nowrap;
+}
+.logo a,
+.toggle a {
+	font-size: 20px;
+}
+
+/* MENU NAVEGADOR TOGGLE MOVILE*/
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.toggle {
+	order: 1;
+}
+.item {
+	width: 100%;
+	text-align: center;
+	order: 3;
+	display: none;
+}
+.item.active {
+	display: block;
+}
+
+/* Navbar Toggle */
+.toggle {
+	cursor: pointer;
+}
+.bars {
+	background: #999;
+	display: inline-block;
+	height: 2px;
+	position: relative;
+	transition: background 0.2s ease-out;
+	width: 18px;
+}
+.bars:before,
+.bars:after {
+	background: #999;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all 0.2s ease-out;
+	width: 100%;
+}
+.bars:before {
+	top: 5px;
+}
+.bars:after {
+	top: -5px;
+}
+
+/* MENÚ NAVEGADOR TABLET */
+@media all and (min-width: 468px) {
+	.menu {
+		justify-content: center;
+	}
+
+	.logo {
+		flex: 1;
+	}
+	.toggle {
+		order: 2;
+	}
+}
+
+/* MENÚ NAVEGADOR PC */
+@media all and (min-width: 768px) {
+	.item {
+		display: block;
+		width: auto;
+	}
+	.toggle {
+		display: none;
+	}
+	.logo {
+		order: 0;
+	}
+	.item {
+		order: 1;
+	}
+	.menu li {
+		padding: 15px 10px;
+	}
+}
+
+/* CONFIGURACIONES DE INICIO - HEADER */
+
+header {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: aquamarine;
+}
+
+header div {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header h1 {
+	font-weight: 400;
+	font-size: 70px;
+	padding-bottom: 15px;
+}
+
+header p {
+	font-weight: 200;
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+
+.perfil-foto {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+}
+
+/* CONFIGURACIONES GENERALES DE SECCION */
+
+section {
+	height: 100vh;
+}
+
+#portafolio {
+	display: flex;
+	justify-content: center;
+	padding: 2rem 1rem;
+	background: #181818;
+}
+
+.grid {
+	padding-top: 100px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 25%);
+	grid-template-rows: repeat(2, 40%);
+	justify-content: center;
+	gap: 1em;
+}
+
+.projects_card {
+	background: #f7f7f7;
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+}
+
+figure {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+figure img {
+	transition: all 500ms ease-out;
+}
+
+figure .imgweb {
+	width: 100%;
+	height: 100%;
+}
+
+figure .imgapp {
+	padding-left: 27%;
+	width: 73%;
+	height: 100%;
+}
+
+figure .capa {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(11, 103, 123, 0.75);
+	transition: all 500ms ease-out;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+}
+
+figure:hover > .capa {
+	opacity: 1;
+	visibility: visible;
+}
+
+figure:hover > .capa h3 {
+	margin-top: 8%;
+	margin-bottom: 15%;
+}
+
+figure .capa h3 {
+	color: #fff;
+	font-weight: 400;
+	margin-bottom: 35%;
+	transition: all 500ms ease-out;
+}
+
+figure .capa ul li {
+	color: #fff;
+	font-weight: 200;
+	line-height: 1.5;
+	position: relative;
+	transition: 0.5;
+	padding: 10px;
+	display: inline-flex;
+	transition: 0.5;
+}
+
+figure .capa ul {
+	box-sizing: border-box;
+	list-style-type: none;
+	text-align: center;
+	margin: 25px 25px;
+}
