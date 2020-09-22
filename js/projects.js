@@ -11,6 +11,7 @@ document.getElementById('toggle').addEventListener('click', function () {
 
 let data = [
 	{
+		id: '001',
 		titulo: 'Ganimed Web',
 		tipo: 1,
 		imgportada: '../img/gan-web/Listado.png',
@@ -24,6 +25,7 @@ let data = [
 		tags: ['Angular', 'TypeScript', 'PostgreSQL', 'NodeJS', 'Express', 'API Rest'],
 	},
 	{
+		id: '002',
 		titulo: 'Ganimed App',
 		tipo: 2,
 		imgportada: '../img/gan-app/Listado.jpg',
@@ -37,6 +39,7 @@ let data = [
 		tags: ['Java', 'PHP', 'Web Services', 'PostgreSQL', 'API Rest'],
 	},
 	{
+		id: '003',
 		titulo: 'Samuel Johnson',
 		tipo: 1,
 		imgportada: '../img/sj/Inicio.png',
@@ -54,7 +57,7 @@ document.getElementById('portafolio').innerHTML = `
 <div class="grid">
 ${data
 	.map(
-		(project) => `<div class="projects_card">						
+		(project) => `<div class="projects_card id="${project.id}">						
 							<figure>
 								<img ${project.tipo == 1 ? ` class="imgweb"` : `class="imgapp"`}
 								src="${project.imgportada}">
