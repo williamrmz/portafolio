@@ -201,8 +201,8 @@ figure {
 	overflow: hidden;
 	border-radius: 8px;
 	box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
-	cursor: pointer;
 }
+/* 	cursor: pointer; */
 
 figure img {
 	transition: all 500ms ease-out;
@@ -264,4 +264,8 @@ figure .capa ul {
 	list-style-type: none;
 	text-align: center;
 	margin: 25px 25px;
+}
+
+figure .ver {
+	cursor: pointer;
 }

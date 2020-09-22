@@ -63,6 +63,7 @@ ${data
 								src="${project.imgportada}">
 								<div class="capa">
 									<h3>${project.titulo}</h3>
+									<button class="ver">Ver</button>
 									<ul>${project.tags.map((tag) => `<li>${tag}</li>`).join('')}</ul>
 								</div>
 							</figure>
@@ -70,3 +71,14 @@ ${data
 	)
 	.join('')}
 </div>`;
+
+// document.getElementById('toggle').addEventListener('click', function () {
+// 	const item = document.getElementsByClassName('item'); //las clases devuelven arreglo
+// 	for (var i = 0; i < item.length; i++) {
+// 		if (item[i].classList.contains('active')) {
+// 			item[i].classList.remove('active');
+// 		} else {
+// 			item[i].classList.add('active');
+// 		}
+// 	}
+// });
