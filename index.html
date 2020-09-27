@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portafolio</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.3/glider.min.css"
+			integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg=="
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="css/estilos.css" />
 	</head>
 	<body>
@@ -45,8 +51,18 @@
 							<h2 class="modal-titulo"></h2>
 							<p class="modal-descripcion"></p>
 						</div>
-						<div class="slider">
-							<div class="slider-container" id="slider-container"></div>
+						<div class="wrapperForDemo">
+							<div class="glider-contain">
+								<div class="glider" id="glider">
+									<div><img id="img-0" src="" alt="" /></div>
+									<div><img id="img-1" src="" alt="" /></div>
+									<div><img id="img-2" src="" alt="" /></div>
+								</div>
+
+								<button role="button" aria-label="Previous" class="glider-prev">«</button>
+								<button role="button" aria-label="Next" class="glider-next">»</button>
+								<div role="tablist" class="dots"></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -54,5 +70,10 @@
 			<section id="contacto" style="background: #361481"></section>
 		</main>
 	</body>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.3/glider.min.js"
+		integrity="sha512-NI5tuaiyhrV4EkyHBGHJj9uaL6uu7fz/WCoMnEwvHi8WXTKZ9f8P1v517sdTGVpT31/UEHRdLMuNdPon9F3HUg=="
+		crossorigin="anonymous"
+	></script>
 	<script src="js/projects.js"></script>
 </html>

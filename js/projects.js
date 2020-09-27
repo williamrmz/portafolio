@@ -15,35 +15,27 @@ let data = [
 	{
 		titulo: 'Ganimed Web',
 		tipo: 1,
-		imgportada: './img/gan-web/Listado.png',
+		imgportada: 'img/gan-web/Listado.png',
 		description:
 			'Una SPA (Single Page Application) desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años',
-		imggallery: [
-			'./img/gan-web/Sesion.png',
-			'./img/gan-web/Listado.png',
-			'./img/gan-web/Registro.png',
-		],
+		imggallery: ['img/gan-web/Sesion.png', 'img/gan-web/Listado.png', 'img/gan-web/Registro.png'],
 		tags: ['Angular', 'TypeScript', 'PostgreSQL', 'NodeJS', 'Express', 'API Rest'],
 	},
 	{
 		titulo: 'Ganimed App',
 		tipo: 2,
-		imgportada: './img/gan-app/Listado.jpg',
+		imgportada: 'img/gan-app/Listado.jpg',
 		description:
 			'Una app móvil desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años',
-		imggallery: [
-			'./img/gan-app/Menu.jpg',
-			'./img/gan-app/Listado.jpg',
-			'./img/gan-app/Registro.jpg',
-		],
+		imggallery: ['img/gan-app/Menu.jpg', 'img/gan-app/Listado.jpg', 'img/gan-app/Registro.jpg'],
 		tags: ['Java', 'PHP', 'Web Services', 'PostgreSQL', 'API Rest'],
 	},
 	{
 		titulo: 'Samuel Johnson',
 		tipo: 1,
-		imgportada: './img/sj/Inicio.png',
+		imgportada: 'img/sj/Inicio.png',
 		description: 'Página web desarrollada para la academia de inglés Samuel Johnson',
-		imggallery: ['./img/sj/Inicio.png', './img/sj/Comunidad.png', './img/sj/Nosotros.png'],
+		imggallery: ['img/sj/Inicio.png', 'img/sj/Comunidad.png', 'img/sj/Nosotros.png'],
 		tags: ['JavaScript', 'CSS', 'Bootstrap', 'jQuery'],
 	},
 ];
@@ -75,16 +67,16 @@ const modalC = document.getElementsByClassName('modal-container');
 Array.from(abrir).forEach((element, index) => {
 	element.addEventListener('click', function (e) {
 		e.preventDefault();
+
 		modalC[0].style.opacity = '1';
 		modalC[0].style.visibility = 'visible';
 		modal[0].classList.toggle('modal-close');
 		document.querySelector('.modal-titulo').textContent = `${data[index].titulo}`;
 		document.querySelector('.modal-descripcion').textContent = `${data[index].description}`;
-		document.getElementById('slider-container').innerHTML = `
-			${data[index].imggallery
-				.map((imagen) => `<img class="imgportafolio" src="${imagen}"></img>`)
-				.join('')}
-			`;
+
+		data[index].imggallery.map(
+			(imagen, idx) => (document.getElementById(`img-${idx}`).src = `${imagen}`)
+		);
 	});
 });
 
@@ -104,4 +96,14 @@ window.addEventListener('click', function (e) {
 			modalC[0].style.visibility = 'hidden';
 		}, 500);
 	}
+});
+
+new Glider(document.querySelector('.glider'), {
+	slidesToShow: 1,
+	draggable: true,
+	arrows: {
+		prev: '.glider-prev',
+		next: '.glider-next',
+	},
+	dots: '.dots',
 });
