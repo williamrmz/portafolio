@@ -16,8 +16,11 @@ let data = [
 		titulo: 'Ganimed Web',
 		tipo: 1,
 		imgportada: 'img/gan-web/Listado.png',
-		description:
-			'Una SPA (Single Page Application) desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años',
+		description: `Una SPA (Single Page Application) desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años
+			a partir de los datos obtenidos en su examinación. Para los niños detectados con anemia se le considera un segundo exámen de diagnóstico luego de dos meses 
+			para evaluar mejorías.
+			Las tecnologías usadas son Angular para el frontend, NodeJS con Express para el backend con API Rest, PostgreSQL para
+			el almacenamiento de los datos.`,
 		imggallery: ['img/gan-web/Sesion.png', 'img/gan-web/Listado.png', 'img/gan-web/Registro.png'],
 		tags: ['Angular', 'TypeScript', 'PostgreSQL', 'NodeJS', 'Express', 'API Rest'],
 	},
@@ -35,7 +38,7 @@ let data = [
 		tipo: 1,
 		imgportada: 'img/sj/Inicio.png',
 		description: 'Página web desarrollada para la academia de inglés Samuel Johnson',
-		imggallery: ['img/sj/Inicio.png', 'img/sj/Comunidad.png', 'img/sj/Nosotros.png'],
+		imggallery: ['img/sj/Inicio.png', 'img/sj/Nosotros.png', 'img/sj/Comunidad.png'],
 		tags: ['JavaScript', 'CSS', 'Bootstrap', 'jQuery'],
 	},
 ];
@@ -100,7 +103,6 @@ window.addEventListener('click', function (e) {
 
 new Glider(document.querySelector('.glider'), {
 	slidesToShow: 1,
-	draggable: true,
 	arrows: {
 		prev: '.glider-prev',
 		next: '.glider-next',
