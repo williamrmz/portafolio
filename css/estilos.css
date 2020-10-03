@@ -145,7 +145,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #e4d9ff;
+    background-color: var(--color-2);
 }
 
 header .contenedor-perfil {
