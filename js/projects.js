@@ -47,8 +47,18 @@ let data = [
 document.getElementById("grid").innerHTML = `
 ${data
     .map(
-        (project, index) => `<div class="projects_card ">						
-							<figure>
+        (project, index) => `<div class="projects_card ">	
+		<div class="lds-roller">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>					
+							<figure class="cargado">
 								<img ${project.tipo == 1 ? ` class="imgweb"` : `class="imgapp"`}
 								src="${project.imgportada}">
 								<div class="capa">
@@ -60,6 +70,21 @@ ${data
 						</div>`
     )
     .join("")}`;
+
+imagenes = document.getElementsByClassName("cargado");
+Array.from(imagenes).forEach((load) => {
+    load.style.display = "none";
+});
+
+window.addEventListener("load", () => {
+    const loader = document.getElementsByClassName("lds-roller");
+    Array.from(loader).forEach((load) => {
+        load.style.display = "none";
+    });
+    Array.from(imagenes).forEach((load) => {
+        load.style.display = "revert";
+    });
+});
 
 /* MODAL */
 const abrir = document.getElementsByClassName("ver");

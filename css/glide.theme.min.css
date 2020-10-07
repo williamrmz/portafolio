@@ -14,8 +14,8 @@
     color: var(--color-2);
     text-transform: uppercase;
     padding: 9px 12px;
-    background-color: var(--color-1);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: var(--color-5);
+    border: 2px solid rgba(241, 250, 238, 0.5);
     border-radius: 4px;
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
     text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
@@ -50,9 +50,9 @@
     transform: translateX(-50%);
 }
 .glide__bullet {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 9px;
-    height: 9px;
+    background-color: rgba(168, 218, 220, 0.5);
+    width: 15px;
+    height: 15px;
     padding: 0;
     border-radius: 50%;
     border: 2px solid transparent;
@@ -68,7 +68,7 @@
 .glide__bullet:hover,
 .glide__bullet:focus {
     border: 2px solid var(--color-5);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(168, 218, 220, 0.5);
 }
 .glide__bullet--active {
     background-color: var(--color-5);
