@@ -1,14 +1,16 @@
 /* NAVEGADOR */
-document.getElementById("toggle").addEventListener("click", function () {
-    const item = document.getElementsByClassName("item");
-    for (var i = 0; i < item.length; i++) {
-        if (item[i].classList.contains("active")) {
-            item[i].classList.remove("active");
-        } else {
-            item[i].classList.add("active");
+function navegador() {
+    document.getElementById("toggle").addEventListener("click", function () {
+        const item = document.getElementsByClassName("item");
+        for (var i = 0; i < item.length; i++) {
+            if (item[i].classList.contains("active")) {
+                item[i].classList.remove("active");
+            } else {
+                item[i].classList.add("active");
+            }
         }
-    }
-});
+    });
+}
 
 /* JSON PROYECTOS */
 let data = [
@@ -44,96 +46,122 @@ let data = [
 ];
 
 /* CARDS */
-document.getElementById("grid").innerHTML = `
-${data
-    .map(
-        (project, index) => `<div class="projects_card ">	
-		<div class="lds-roller">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>					
-							<figure class="cargado">
-								<img ${project.tipo == 1 ? ` class="imgweb"` : `class="imgapp"`}
-								src="${project.imgportada}">
-								<div class="capa">
-									<h3>${project.titulo}</h3>
-									<a href="#" class="ver" id="${index}" >Ver</a>
-									<ul>${project.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>
-								</div>
-							</figure>
-						</div>`
-    )
-    .join("")}`;
+function cards() {
+    document.getElementById("grid").innerHTML = `
+    ${data
+        .map(
+            (project, index) => `<div class="projects_card ">	
+            <div class="lds-roller">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>					
+                                <figure class="figure">
+                                    <img ${
+                                        project.tipo == 1
+                                            ? ` class="cargando imgweb"`
+                                            : `class="cargando imgapp"`
+                                    }
+                                    src="${project.imgportada}">
+                                    <div class="capa">
+                                        <h3>${project.titulo}</h3>
+                                        <a href="#" class="ver" id="${index}" >Ver</a>
+                                        <ul>${project.tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>
+                                    </div>
+                                </figure>
+                            </div>`
+        )
+        .join("")}`;
+}
 
-imagenes = document.getElementsByClassName("cargado");
-Array.from(imagenes).forEach((load) => {
-    load.style.display = "none";
-});
+// Loader en imagenes
+function loader() {
+    figuras = document.getElementsByClassName("figure");
+    Array.from(figuras).forEach((figure) => {
+        figure.style.display = "none";
+    });
 
-window.addEventListener("load", () => {
-    const loader = document.getElementsByClassName("lds-roller");
-    Array.from(loader).forEach((load) => {
-        load.style.display = "none";
+    imagenes = document.getElementsByClassName("cargando");
+    Array.from(imagenes).forEach((imagen) => {
+        imagen.addEventListener("load", () => {
+            const loader = document.getElementsByClassName("lds-roller");
+            Array.from(loader).forEach((load) => {
+                load.style.display = "none";
+            });
+            Array.from(figuras).forEach((figura) => {
+                figura.style.display = "revert";
+            });
+        });
     });
-    Array.from(imagenes).forEach((load) => {
-        load.style.display = "revert";
-    });
-});
+}
 
 /* MODAL */
-const abrir = document.getElementsByClassName("ver");
-const cerrar = document.getElementsByClassName("close");
-const modal = document.getElementsByClassName("modal");
-const modalC = document.getElementsByClassName("modal-container");
+function modal() {
+    const abrir = document.getElementsByClassName("ver");
+    const cerrar = document.getElementsByClassName("close");
+    const modal = document.getElementsByClassName("modal");
+    const modalC = document.getElementsByClassName("modal-container");
 
-Array.from(abrir).forEach((element, index) => {
-    element.addEventListener("click", function (e) {
-        e.preventDefault();
+    Array.from(abrir).forEach((element, index) => {
+        element.addEventListener("click", function (e) {
+            e.preventDefault();
 
-        modalC[0].style.opacity = "1";
-        modalC[0].style.visibility = "visible";
-        modal[0].classList.toggle("modal-close");
-        document.querySelector(".modal-titulo").textContent = `${data[index].titulo}`;
-        document.querySelector(".modal-descripcion").textContent = `${data[index].description}`;
-        data[index].imggallery.map(
-            (imagen, idx) => (document.getElementById(`img-${idx}`).src = `${imagen}`)
-        );
-        glide.update();
-        glide.go("=0");
+            modalC[0].style.opacity = "1";
+            modalC[0].style.visibility = "visible";
+            modal[0].classList.toggle("modal-close");
+            document.querySelector(".modal-titulo").textContent = `${data[index].titulo}`;
+            document.querySelector(".modal-descripcion").textContent = `${data[index].description}`;
+            data[index].imggallery.map(
+                (imagen, idx) => (document.getElementById(`img-${idx}`).src = `${imagen}`)
+            );
+            glide.update();
+            glide.go("=0");
+        });
     });
-});
 
-cerrar[0].addEventListener("click", function (e) {
-    modal[0].classList.toggle("modal-close");
-    setTimeout(() => {
-        modalC[0].style.opacity = "0";
-        modalC[0].style.visibility = "hidden";
-    }, 500);
-});
-
-window.addEventListener("click", function (e) {
-    if (e.target == modalC[0]) {
+    cerrar[0].addEventListener("click", function (e) {
         modal[0].classList.toggle("modal-close");
         setTimeout(() => {
             modalC[0].style.opacity = "0";
             modalC[0].style.visibility = "hidden";
         }, 500);
-    }
-});
+    });
 
-var glide = new Glide(".glide", {
-    startAt: "0",
-    focusAt: "0",
-    autoplay: 3500,
-    hoverpause: true,
-    keyboard: true,
-    animationDuration: 1500,
-});
+    window.addEventListener("click", function (e) {
+        if (e.target == modalC[0]) {
+            modal[0].classList.toggle("modal-close");
+            setTimeout(() => {
+                modalC[0].style.opacity = "0";
+                modalC[0].style.visibility = "hidden";
+            }, 500);
+        }
+    });
+}
 
-glide.mount();
+function slider() {
+    var glide = new Glide(".glide", {
+        startAt: "0",
+        focusAt: "0",
+        autoplay: 3500,
+        hoverpause: true,
+        keyboard: true,
+        animationDuration: 1500,
+    });
+
+    glide.mount();
+}
+
+function funciones() {
+    navegador();
+    cards();
+    loader();
+    modal();
+    slider();
+}
+
+funciones();
