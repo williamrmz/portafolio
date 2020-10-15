@@ -343,20 +343,28 @@ figure .ver {
 
 .modal-texto {
 	justify-content: center;
-	width: 85%;
+	width: 70%;
+	padding-bottom: 25px;
 }
 
 .modal-titulo {
 	font-weight: 400;
 	font-size: 3rem;
-	padding-top: 15px;
+	padding-top: 25px;
 }
 
 .modal-descripcion {
 	text-align: justify;
 	font-weight: 200;
 	font-size: 1.5rem;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
+}
+
+.modal-link {
+	font-weight: 200;
+	font-size: 1.5rem;
+	color: red;
+	cursor: pointer;
 }
 
 .close {

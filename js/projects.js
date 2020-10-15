@@ -18,30 +18,38 @@ let data = [
         titulo: "Ganimed Web",
         tipo: "web",
         imgportada: "img/gan-web/Listado.png",
-        description: `Una SPA (Single Page Application) desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a "web"2 años
+        description: `Una SPA (Single Page Application) desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años
 			a partir de los datos obtenidos en su examinación. Para los niños detectados con anemia se le considera un segundo exámen de diagnóstico luego de dos meses 
 			para evaluar mejorías.
 			Las tecnologías usadas son Angular para el frontend, NodeJS con Express para el backend con API Rest, PostgreSQL para
 			el almacenamiento de los datos.`,
         imggallery: ["img/gan-web/Sesion.png", "img/gan-web/Listado.png", "img/gan-web/Registro.png"],
         tags: ["Angular", "TypeScript", "PostgreSQL", "NodeJS", "Express", "API Rest"],
+        link: "https://williamrmz.herokuapp.com/"
     },
     {
         titulo: "Ganimed App",
         tipo: "app",
         imgportada: "img/gan-app/Listado.jpg",
-        description:
-            "Una app móvil desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años",
+        description:`Una App Móvil nativa desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años
+            a partir de los datos obtenidos en su examinación. Para los niños detectados con anemia se le considera un segundo exámen de diagnóstico luego de dos meses 
+            para evaluar mejorías.
+            Las tecnologías usadas son Java con Android SDK, PHP para las web services, PostgreSQL para
+            el almacenamiento de los datos.`,
         imggallery: ["img/gan-app/Menu.jpg", "img/gan-app/Listado.jpg", "img/gan-app/Registro.jpg"],
         tags: ["Java", "PHP", "Web Services", "PostgreSQL", "API Rest"],
+        link: "https://drive.google.com/file/d/1GnjZbwl4SjnMpMvAzhYl4YNPMpRVwBmP/view?usp=sharing"
     },
     {
         titulo: "Samuel Johnson",
         tipo: "web",
         imgportada: "img/sj/Inicio.png",
-        description: "Página web desarrollada para la academia de inglés Samuel Johnson",
+        description: `Página web desarrollada para la academia de inglés Samuel Johnson Englis Academy con el cual se muestra la información del rubro, su comunidad y forma de contactar. Además
+            se segmentó el chat de su página de Facebook para el contacto inmediato así como su ubicación en el mapa con Google.
+            Las tecnologías usadas son Javascript con jQuery, HTML5, CSS3 y librería Bootstrap`,
         imggallery: ["img/sj/Inicio.png", "img/sj/Nosotros.png", "img/sj/Comunidad.png"],
         tags: ["JavaScript", "CSS", "Bootstrap", "jQuery"],
+        link: "https://www.samueljohnsonea.com/"
     }
 ];
 
@@ -116,6 +124,7 @@ function modal() {
     Array.from(abrir).forEach((element, index) => {
         element.addEventListener("click", function (e) {
             e.preventDefault();
+            document.getElementsByClassName("modal")[0].scrollTop = 0;
             modalC[0].style.opacity = "1";
             modalC[0].style.visibility = "visible";
             modal[0].classList.toggle("modal-close");
@@ -133,6 +142,8 @@ function modal() {
                 document.getElementById(`img-${idx}`).classList.add(`${data[index].tipo}`)
             });
             
+            document.getElementById("link").setAttribute("href", `${data[index].link}`)
+
             glide.update();
             glide.go("=0");
         });
