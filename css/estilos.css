@@ -374,7 +374,7 @@ figure .ver {
     height: 100%;
 }
 
-.img-galeria {
+.img-galeria .web {
     width: 100%;
     height: 100%;
 }
@@ -416,12 +416,6 @@ figure .ver {
     .grid {
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(3, minmax(300px, auto));
-    }
-}
-
-@media (min-height: 800px) {
-    header {
-        height: 100%;
     }
 }
 
