@@ -107,17 +107,20 @@ function loader() {
 
     //extraer todos los img para poder asignar el evento load
     imagenes = document.getElementsByClassName("cargando");
-    Array.from(imagenes).forEach((imagen) => {
+    Array.from(imagenes).forEach((imagen, index) => {
         imagen.addEventListener("load", () => {
             //ocultar el loader una vez carguen
             const loader = document.getElementsByClassName("lds-roller");
-            Array.from(loader).forEach((load) => {
-                load.style.display = "none";
-            });
+            // Array.from(loader).forEach((load) => {
+            //     load.style.display = "none";
+            // });
+            loader[index].style.display = "none"
+
             //mostrar los figure una vez carguen
-            Array.from(figuras).forEach((figura) => {
-                figura.style.display = "revert";
-            });
+            // Array.from(figuras).forEach((figura) => {
+            //     figura.style.display = "revert";
+            // });
+            figuras[index].style.display = "revert"
         });
     });
 }
