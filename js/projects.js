@@ -50,6 +50,16 @@ let data = [
         imggallery: ["img/sj/Inicio.png", "img/sj/Nosotros.png", "img/sj/Comunidad.png"],
         tags: ["JavaScript", "CSS", "Bootstrap", "jQuery"],
         link: "https://www.samueljohnsonea.com/"
+    },
+    {
+        titulo: "Préstamos Richard",
+        tipo: "web",
+        imgportada: "img/prestamos/portada.png",
+        description: `Porgrama de escritorio para prestamista el cual puede registrar clientes, prestamos acorde a meses y sus respectivos pagos.
+            Está desarrollada en Java conectada a una BD local en postgreSQL`,
+        imggallery: ["img/prestamos/cliente.png", "img/prestamos/prestamo.png", "img/prestamos/pago.png"],
+        tags: ["Java", "PostgreSQL"],
+        link: "https://drive.google.com/file/d/1gG2ZhcL90a9-bX2vKPHNnkEb1mV29e5o/view?usp=sharing"
     }
 ];
 
