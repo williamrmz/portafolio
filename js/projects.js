@@ -55,8 +55,8 @@ let data = [
         titulo: "Préstamos Richard",
         tipo: "web",
         imgportada: "img/prestamos/portada.png",
-        description: `Porgrama de escritorio para prestamista el cual puede registrar clientes, prestamos acorde a meses y sus respectivos pagos.
-            Está desarrollada en Java conectada a una BD local en postgreSQL`,
+        description: `Porgrama de escritorio para prestamista el cual puede registrar clientes, prestamos acorde a días, semanas o meses y sus respectivos pagos.
+            Está desarrollada en Java conectada a una base de datos local en PostgreSQL`,
         imggallery: ["img/prestamos/cliente.png", "img/prestamos/prestamo.png", "img/prestamos/pago.png"],
         tags: ["Java", "PostgreSQL"],
         link: "https://drive.google.com/file/d/1gG2ZhcL90a9-bX2vKPHNnkEb1mV29e5o/view?usp=sharing"
