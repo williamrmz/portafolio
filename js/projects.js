@@ -142,6 +142,7 @@ function modal() {
                 document.getElementById(`img-${idx}`).classList.add(`${data[index].tipo}`)
             });
             
+            //link a enlace
             document.getElementById("link").setAttribute("href", `${data[index].link}`)
 
             glide.update();
@@ -170,11 +171,24 @@ function modal() {
     });
 }
 
+function active(){
+    var btns = document.getElementsByClassName("item-link");
+
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("activado");
+            current[0].className = current[0].className.replace(" activado", "");
+            this.className += " activado";
+            });
+        }
+}
+
 function funciones() {
     navegador();
     cards();
     loader();
     modal();
+    active();
 }
 
 funciones();

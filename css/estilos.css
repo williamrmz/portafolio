@@ -39,16 +39,29 @@ nav {
 	top: 0;
 	right: 0;
 }
+
 ul {
 	list-style-type: none;
 }
-a {
+
+.item-link {
 	color: var(--color-2);
 	text-decoration: none;
 }
-a:hover {
-	text-decoration: underline;
+.item-link:hover {
+	text-decoration: none;
+	/* text-decoration: underline; */
+	color: var(--color-2);
+	border-radius: 8px;
+	border: 2px solid var(--color-3);
 }
+
+.activado {
+	color: var(--color-2);
+	border-radius: 8px;
+	border: 2px solid var(--color-3);
+}
+
 .logo a:hover {
 	text-decoration: none;
 }
@@ -59,7 +72,9 @@ a:hover {
 }
 .logo a,
 .toggle a {
+	text-decoration: none;
 	font-size: 20px;
+	color: var(--color-2);
 }
 
 /* MENU NAVEGADOR TOGGLE MOVILE*/
@@ -344,39 +359,49 @@ figure .ver {
 .modal-texto {
 	justify-content: center;
 	width: 70%;
-	padding-bottom: 25px;
+	padding-bottom: 45px;
 }
 
 .modal-titulo {
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 3rem;
 	padding-top: 25px;
+	color: var(--color-5);
 }
 
 .modal-descripcion {
 	text-align: justify;
 	font-weight: 200;
 	font-size: 1.5rem;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 }
 
 .modal-link {
-	font-weight: 200;
-	font-size: 1.5rem;
-	color: red;
-	cursor: pointer;
+	text-decoration: none;
+	padding: 10px;
+	font-weight: 600;
+	font-size: 20px;
+	color: #ffffff;
+	background-color: var(--color-4);
+	border-radius: 6px;
+	border: 2px solid var(--color-5);
+}
+.modal-link:hover {
+	text-decoration: none;
+	color: var(--color-5);
+	background-color: var(--color-3);
 }
 
 .close {
-	position: absolute;
-	width: 25px;
-	height: 25px;
+	position: fixed;
+	width: 35px;
+	height: 35px;
 	top: 5px;
 	right: 5px;
 	display: inline-block;
 	background: var(--color-1);
 	color: #fff;
-	line-height: 25px;
+	line-height: 35px;
 	cursor: pointer;
 	border-radius: 8px;
 }
@@ -449,10 +474,12 @@ figure .ver {
 	z-index: 5;
 	margin: auto auto;
 }
+
 .lds-roller div {
 	animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 	transform-origin: 40px 40px;
 }
+
 .lds-roller div:after {
 	content: ' ';
 	display: block;
@@ -463,23 +490,29 @@ figure .ver {
 	background: black;
 	margin: -4px 0 0 -4px;
 }
+
 .lds-roller div:nth-child(1) {
 	animation-delay: -0.036s;
 }
+
 .lds-roller div:nth-child(1):after {
 	top: 63px;
 	left: 63px;
 }
+
 .lds-roller div:nth-child(2) {
 	animation-delay: -0.072s;
 }
+
 .lds-roller div:nth-child(2):after {
 	top: 68px;
 	left: 56px;
 }
+
 .lds-roller div:nth-child(3) {
 	animation-delay: -0.108s;
 }
+
 .lds-roller div:nth-child(3):after {
 	top: 71px;
 	left: 48px;
@@ -487,6 +520,7 @@ figure .ver {
 .lds-roller div:nth-child(4) {
 	animation-delay: -0.144s;
 }
+
 .lds-roller div:nth-child(4):after {
 	top: 72px;
 	left: 40px;
@@ -494,6 +528,7 @@ figure .ver {
 .lds-roller div:nth-child(5) {
 	animation-delay: -0.18s;
 }
+
 .lds-roller div:nth-child(5):after {
 	top: 71px;
 	left: 32px;
@@ -501,13 +536,16 @@ figure .ver {
 .lds-roller div:nth-child(6) {
 	animation-delay: -0.216s;
 }
+
 .lds-roller div:nth-child(6):after {
 	top: 68px;
 	left: 24px;
 }
+
 .lds-roller div:nth-child(7) {
 	animation-delay: -0.252s;
 }
+
 .lds-roller div:nth-child(7):after {
 	top: 63px;
 	left: 17px;
@@ -515,10 +553,12 @@ figure .ver {
 .lds-roller div:nth-child(8) {
 	animation-delay: -0.288s;
 }
+
 .lds-roller div:nth-child(8):after {
 	top: 56px;
 	left: 12px;
 }
+
 @keyframes lds-roller {
 	0% {
 		transform: rotate(0deg);
