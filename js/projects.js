@@ -44,7 +44,7 @@ let data = [
         titulo: "Samuel Johnson",
         tipo: "web",
         imgportada: "img/sj/Inicio.png",
-        description: `Página web desarrollada para la academia de inglés Samuel Johnson Englis Academy con el cual se muestra la información del rubro, su comunidad y forma de contactar. Además
+        description: `Página web desarrollada para la academia de inglés Samuel Johnson English Academy con el cual se muestra la información del rubro, su comunidad y forma de contactar. Además
             se segmentó el chat de su página de Facebook para el contacto inmediato así como su ubicación en el mapa con Google.
             Las tecnologías usadas son Javascript con jQuery, HTML5, CSS3 y librería Bootstrap`,
         imggallery: ["img/sj/Inicio.png", "img/sj/Nosotros.png", "img/sj/Comunidad.png"],
@@ -196,12 +196,45 @@ function active(){
         }
 }
 
+
+
+function scrolling(){
+    //const alturatotal = document.body.clientHeight;
+    const alturainicio = document.getElementById("inicio").clientHeight;
+    const alturaskill = document.getElementById("skills").clientHeight;
+    // console.log(alturainicio +alturaskill)
+    
+    document.getElementById("item-conoc").addEventListener("click", function() {    
+        const alturap = alturainicio-35;
+        document.documentElement.scrollTop = alturap;
+        })
+        document.getElementById("item-porta").addEventListener("click", function() {    
+        const alturap = (alturainicio + alturaskill)-35;
+        document.documentElement.scrollTop = alturap;
+        })
+    if(window.innerWidth > 780){
+        window.addEventListener("scroll", function(){
+            alturascroll =document.documentElement.scrollTop
+            if(alturascroll < 100|| alturascroll > (alturainicio + alturaskill - 50)){
+            Array.from(document.getElementsByClassName("skills-clase")).forEach((element, idx) => {
+                element.classList.remove("skills-lista")
+            });
+            }else{
+            Array.from(document.getElementsByClassName("skills-clase")).forEach((element, idx) => {
+                element.classList.add("skills-lista")
+            });
+        }
+        })    
+    }   
+}
+
 function funciones() {
     navegador();
     cards();
     loader();
     modal();
     active();
+    scrolling();
 }
 
 funciones();
@@ -217,5 +250,4 @@ var glide = new Glide(".glide", {
 });
 
 glide.mount();
-
 

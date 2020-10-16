@@ -8,14 +8,6 @@
     --color-5: #1d3557;
 }
 
-:root {
-    --color-1: #e63946;
-    --color-2: #f1faee;
-    --color-3: #a8dadc;
-    --color-4: #457b9d;
-    --color-5: #1d3557;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -47,6 +39,7 @@ ul {
 .item-link {
     color: var(--color-2);
     text-decoration: none;
+    cursor: pointer;
 }
 .item-link:hover {
     text-decoration: none;
@@ -174,7 +167,7 @@ header {
 header .contenedor-perfil {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 70%;
     align-items: center;
     justify-content: center;
 }
@@ -214,15 +207,213 @@ header div .perfil-foto {
 /* CONFIGURACIONES GENERALES DE SECCION */
 section {
     height: 100vh;
+    /* padding-top: 67px; */
 }
 
-#portafolio {
+/* 
+	SKILLS
+*/
+#skills {
+    background-color: var(--color-3);
+}
+
+.skills-titulo {
     display: flex;
     justify-content: center;
-    padding: 2rem 1rem;
-    background: var(--color-3);
+    align-items: flex-end;
+    height: 15%;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.skills-container {
+    display: flex;
+    height: 85%;
+    justify-content: center;
+    /* align-items: center; */
+    top: 0;
+}
+
+.skills-lista {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.skills-lista ul {
+    width: 500px;
+}
+
+.skills-lista li {
+    position: relative;
+    list-style: none;
+    margin: 50px 0;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.skills-lista li:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(54, 126, 223, 0.5);
+    border-radius: 1000px;
+}
+
+.skills-lista li:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    width: 0;
+    height: 20px;
+    background-color: rgba(54, 126, 223, 1);
+    border-radius: 1000px;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+li.sk-html:after {
+    animation-name: sk-html;
+}
+
+@keyframes sk-html {
+    to {
+        width: 90%;
+    }
+}
+
+li.sk-css:after {
+    animation-name: sk-css;
+}
+
+@keyframes sk-css {
+    to {
+        width: 60%;
+    }
+}
+
+li.sk-js:after {
+    animation-name: sk-js;
+}
+
+@keyframes sk-js {
+    to {
+        width: 84%;
+    }
+}
+
+li.sk-jquery:after {
+    animation-name: sk-jquery;
+}
+
+@keyframes sk-jquery {
+    to {
+        width: 75%;
+    }
+}
+
+li.sk-php:after {
+    animation-name: sk-php;
+}
+
+@keyframes sk-php {
+    to {
+        width: 80%;
+    }
+}
+
+li.sk-android:after {
+    animation-name: sk-android;
+}
+
+@keyframes sk-android {
+    to {
+        width: 65%;
+    }
+}
+
+li.sk-java:after {
+    animation-name: sk-java;
+}
+
+@keyframes sk-java {
+    to {
+        width: 87%;
+    }
+}
+
+li.sk-sql:after {
+    animation-name: sk-sql;
+}
+
+@keyframes sk-sql {
+    to {
+        width: 80%;
+    }
+}
+
+li.sk-angular:after {
+    animation-name: sk-angular;
+}
+
+@keyframes sk-angular {
+    to {
+        width: 74%;
+    }
+}
+
+li.sk-node:after {
+    animation-name: sk-node;
+}
+
+@keyframes sk-node {
+    to {
+        width: 72%;
+    }
+}
+
+li.sk-react:after {
+    animation-name: sk-react;
+}
+
+@keyframes sk-react {
+    to {
+        width: 56%;
+    }
+}
+
+li.sk-git:after {
+    animation-name: sk-git;
+}
+
+@keyframes sk-git {
+    to {
+        width: 77%;
+    }
+}
+
+/* 
+	PORTAFOLIO
+*/
+#portafolio {
+    background: var(--color-4);
 }
 /* ARREGLAR PADDING */
+
+.portafolio-container {
+    display: flex;
+    width: 100%;
+    height: 85%;
+    padding: 0 1rem 2rem 1rem;
+    justify-content: center;
+}
 
 .grid {
     padding: 2rem;
@@ -449,6 +640,32 @@ figure .ver {
     }
     .modal-titulo {
         margin-top: 2%;
+    }
+
+    .skills-titulo {
+        padding-top: 40px;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-lista {
+        width: 300px;
+    }
+
+    .skills-lista:nth-child(1) {
+        padding-bottom: 0px;
+    }
+
+    .skills-lista:nth-child(2) {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .skills-lista:nth-child(2) ul {
+        position: relative;
+        top: -40px;
     }
 }
 

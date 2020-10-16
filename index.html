@@ -13,7 +13,8 @@
             <ul class="menu">
                 <li class="logo"><a href="#">WilliamRMz</a></li>
                 <li class="item" id="item"><a class="item-link activado" href="#inicio">Inicio</a></li>
-                <li class="item" id="item"><a class="item-link" href="#portafolio">Portafolio</a>
+                <li class="item" id="item-conoc"><a class="item-link" >Conocimiento</a>
+                <li class="item" id="item-porta"><a class="item-link" >Portafolio</a>
                 </li>
                 <li class="toggle" id="toggle">
                     <span class="bars"></span>
@@ -26,9 +27,10 @@
                 <div class="perfil-texto">
                     <h1>¡Hola!, soy William</h1>
                     <p>
-                        Bienvenidos a mi portafolio. Soy bachiller en ingenería de sistemas y computación, me especializo en
+                        Bienvenidos a mi portafolio. Soy bachiller en ingeniería de sistemas y computación, me especializo en
                         el desarrollo web tanto del lado del frontend como el backend, cuento con
-                        conocimientos en el desarrollo de aplicativos móviles y de escritorio.
+                        conocimientos en el desarrollo de aplicativos móviles y de escritorio, además sé del manejo de base de datos
+                        y controlador de versiones.
                     </p>
                     <p>
                         Este sitio albergará mi perfil profesional, aportes y proyectos. Mis principales
@@ -38,46 +40,78 @@
             </div>
         </header>
         <main>
+            <section id="skills">
+                <div class="skills-titulo">
+                    <h1>Conocimientos</h1>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-clase skills-lista">
+                        <ul>
+                            <li class="sk-html">HTML</li>
+                            <li class="sk-css">CSS</li>
+                            <li class="sk-js">JavaScript</li>
+                            <li class="sk-jquery">jQuery</li>
+                            <li class="sk-php">PHP</li>
+                            <li class="sk-android">Android SDK</li>
+                        </ul>
+                    </div>
+                    <div class="skills-clase skills-lista">
+                        <ul>
+                            <li class="sk-java">JAVA</li>
+                            <li class="sk-sql">SQL</li>
+                            <li class="sk-angular">Angular</li>
+                            <li class="sk-node">Node JS</li>
+                            <li class="sk-react">React</li>
+                            <li class="sk-git">Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section id="portafolio">
-                <div class="grid" id="grid"></div>
-                <div class="modal-container">				
-                    <div class="modal modal-close">							
-						<p class="close">X</p>
-                        <div class="modal-texto">
-                            <h2 class="modal-titulo"></h2>
-							<p class="modal-descripcion"></p>
-							<a class="modal-link" id="link" href="#" target="_blank">Visitar Proyecto</a>
-                        </div>
-                        <div class="wrapperForDemo">
-                            <div class="glide">
-                                <div class="glide__arrows" data-glide-el="controls">
-                                    <button class="arrows glide__arrow glide__arrow--left" data-glide-dir="<">
-                                        <
-                                    </button>
-                                    <button
-                                        class="arrows glide__arrow glide__arrow--right"
-                                        data-glide-dir=">"
-                                    >
+                <div class="skills-titulo">
+                    <h1>Portafolio</h1>
+                </div>
+                <div class="portafolio-container">
+                    <div class="grid" id="grid"></div>
+                    <div class="modal-container">				
+                        <div class="modal modal-close">							
+                            <p class="close">X</p>
+                            <div class="modal-texto">
+                                <h2 class="modal-titulo"></h2>
+                                <p class="modal-descripcion"></p>
+                                <a class="modal-link" id="link" href="#" target="_blank">Visitar Proyecto</a>
+                            </div>
+                            <div class="wrapperForDemo">
+                                <div class="glide">
+                                    <div class="glide__arrows" data-glide-el="controls">
+                                        <button class="arrows glide__arrow glide__arrow--left" data-glide-dir="<">
+                                            <
+                                        </button>
+                                        <button
+                                            class="arrows glide__arrow glide__arrow--right"
+                                            data-glide-dir=">"
                                         >
-                                    </button>
-                                </div>
-                                <div class="glide__track" data-glide-el="track">
-                                    <ul class="glide__slides">
-                                        <li class="glide__slide">
-                                            <img class="img-galeria" id="img-0" src="" alt="" />
-                                        </li>
-                                        <li class="glide__slide">
-                                            <img class="img-galeria" id="img-1" src="" alt="" />
-                                        </li>
-                                        <li class="glide__slide">
-                                            <img class="img-galeria" id="img-2" src="" alt="" />
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="glide__bullets" data-glide-el="controls[nav]">
-                                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                                            >
+                                        </button>
+                                    </div>
+                                    <div class="glide__track" data-glide-el="track">
+                                        <ul class="glide__slides">
+                                            <li class="glide__slide">
+                                                <img class="img-galeria" id="img-0" src="" alt="" />
+                                            </li>
+                                            <li class="glide__slide">
+                                                <img class="img-galeria" id="img-1" src="" alt="" />
+                                            </li>
+                                            <li class="glide__slide">
+                                                <img class="img-galeria" id="img-2" src="" alt="" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
