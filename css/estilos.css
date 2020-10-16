@@ -667,6 +667,9 @@ figure .ver {
         position: relative;
         top: -40px;
     }
+    section {
+        height: 100%;
+    }
 }
 
 @media (max-width: 560px) {
@@ -679,6 +682,7 @@ figure .ver {
     }
 
     .grid {
+        /* si agregas más de 4 subes */
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(4, minmax(300px, auto));
     }

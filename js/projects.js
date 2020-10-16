@@ -204,14 +204,18 @@ function scrolling(){
     const alturaskill = document.getElementById("skills").clientHeight;
     // console.log(alturainicio +alturaskill)
     
+    document.getElementById("item-inicio").addEventListener("click", function() {    
+        const alturap = 0;
+        document.documentElement.scrollTop = alturap;
+    })
     document.getElementById("item-conoc").addEventListener("click", function() {    
         const alturap = alturainicio-35;
         document.documentElement.scrollTop = alturap;
-        })
-        document.getElementById("item-porta").addEventListener("click", function() {    
-        const alturap = (alturainicio + alturaskill)-35;
-        document.documentElement.scrollTop = alturap;
-        })
+    })
+    document.getElementById("item-porta").addEventListener("click", function() {    
+            const alturap = (alturainicio + alturaskill)-35;
+    document.documentElement.scrollTop = alturap;
+    })
     if(window.innerWidth > 780){
         window.addEventListener("scroll", function(){
             alturascroll =document.documentElement.scrollTop
@@ -225,7 +229,7 @@ function scrolling(){
             });
         }
         })    
-    }   
+    }
 }
 
 function funciones() {
