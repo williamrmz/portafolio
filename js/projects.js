@@ -85,7 +85,8 @@ function cards() {
                                             ? ` class="cargando imgweb"`
                                             : `class="cargando imgapp"`
                                     }
-                                    src="${project.imgportada}">
+                                    src="${project.imgportada}"
+                                    alt="${project.titulo}">
                                     <div class="capa">
                                         <h3>${project.titulo}</h3>
                                         <a href="#" class="ver" id="${index}" >Ver</a>
@@ -149,6 +150,10 @@ function modal() {
                 (ruta, idx) => (document.getElementById(`img-${idx}`).src = `${ruta}`)
             );
 
+            // data[index].imggallery.map(
+            //     (ruta, idx) => (document.getElementById(`img-${idx}`).alt = `${ruta}`)
+            // );
+
             //recorrido a cantidad de imagenes para agregar si es imagen app o web
             Array.from(imgs).forEach((element, idx) => {
                 document.getElementById(`img-${idx}`).classList.remove("web", "app")
@@ -199,10 +204,8 @@ function active(){
 
 
 function scrolling(){
-    //const alturatotal = document.body.clientHeight;
     const alturainicio = document.getElementById("inicio").clientHeight;
     const alturaskill = document.getElementById("skills").clientHeight;
-    // console.log(alturainicio +alturaskill)
     
     document.getElementById("item-inicio").addEventListener("click", function() {    
         const alturap = 0;
