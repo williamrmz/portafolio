@@ -17,20 +17,20 @@ let data = [
     {
         titulo: "Ganimed Web",
         tipo: "web",
-        imgportada: "img/gan-web/Listado.png",
+        imgportada: "img/gan-web/portada.jpg",
         description: `Una SPA (Single Page Application) desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años
 			a partir de los datos obtenidos en su examinación. Para los niños detectados con anemia se le considera un segundo exámen de diagnóstico luego de dos meses 
 			para evaluar mejorías.
 			Las tecnologías usadas son Angular para el frontend, NodeJS con Express para el backend con API Rest, PostgreSQL para
 			el almacenamiento de los datos.`,
-        imggallery: ["img/gan-web/Sesion.png", "img/gan-web/Listado.png", "img/gan-web/Registro.png"],
+        imggallery: ["img/gan-web/Sesion.jpg", "img/gan-web/Listado.jpg", "img/gan-web/Registro.jpg"],
         tags: ["Angular", "TypeScript", "PostgreSQL", "NodeJS", "Express", "API Rest"],
         link: "https://williamrmz.herokuapp.com/"
     },
     {
         titulo: "Ganimed App",
         tipo: "app",
-        imgportada: "img/gan-app/Listado.jpg",
+        imgportada: "img/gan-app/portada.jpg",
         description:`Una App Móvil nativa desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años
             a partir de los datos obtenidos en su examinación. Para los niños detectados con anemia se le considera un segundo exámen de diagnóstico luego de dos meses 
             para evaluar mejorías.
@@ -43,21 +43,21 @@ let data = [
     {
         titulo: "Samuel Johnson",
         tipo: "web",
-        imgportada: "img/sj/Inicio.png",
+        imgportada: "img/sj/portada.jpg",
         description: `Página web desarrollada para la academia de inglés Samuel Johnson English Academy con el cual se muestra la información del rubro, su comunidad y forma de contactar. Además
             se segmentó el chat de su página de Facebook para el contacto inmediato así como su ubicación en el mapa con Google.
             Las tecnologías usadas son Javascript con jQuery, HTML5, CSS3 y librería Bootstrap`,
-        imggallery: ["img/sj/Inicio.png", "img/sj/Nosotros.png", "img/sj/Comunidad.png"],
+        imggallery: ["img/sj/Inicio.jpg", "img/sj/Nosotros.jpg", "img/sj/Comunidad.jpg"],
         tags: ["JavaScript", "CSS", "Bootstrap", "jQuery"],
         link: "https://www.samueljohnsonea.com/"
     },
     {
         titulo: "Préstamos Richard",
         tipo: "web",
-        imgportada: "img/prestamos/portada.png",
+        imgportada: "img/prestamos/portada2.jpg",
         description: `Porgrama de escritorio para prestamista el cual puede registrar clientes, prestamos acorde a días, semanas o meses y sus respectivos pagos.
             Está desarrollada en Java conectada a una base de datos local en PostgreSQL`,
-        imggallery: ["img/prestamos/cliente.png", "img/prestamos/prestamo.png", "img/prestamos/pago.png"],
+        imggallery: ["img/prestamos/cliente.jpg", "img/prestamos/prestamo.jpg", "img/prestamos/pago.jpg"],
         tags: ["Java", "PostgreSQL"],
         link: "https://drive.google.com/file/d/1gG2ZhcL90a9-bX2vKPHNnkEb1mV29e5o/view?usp=sharing"
     }
