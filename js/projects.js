@@ -17,7 +17,7 @@ let data = [
     {
         titulo: "Ganimed Web",
         tipo: "web",
-        imgportada: "img/gan-web/portada.jpg",
+        imgportada: "img/gan-web/Listado.jpg",
         description: `Una SPA (Single Page Application) desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años
 			a partir de los datos obtenidos en su examinación. Para los niños detectados con anemia se le considera un segundo exámen de diagnóstico luego de dos meses 
 			para evaluar mejorías.
@@ -30,7 +30,7 @@ let data = [
     {
         titulo: "Ganimed App",
         tipo: "app",
-        imgportada: "img/gan-app/portada.jpg",
+        imgportada: "img/gan-app/Listado.jpg",
         description:`Una App Móvil nativa desarrollada para consultorio pediatra de la clínica Ganimed para la detección de anemia en pacientes de 0 a 12 años
             a partir de los datos obtenidos en su examinación. Para los niños detectados con anemia se le considera un segundo exámen de diagnóstico luego de dos meses 
             para evaluar mejorías.
@@ -43,7 +43,7 @@ let data = [
     {
         titulo: "Samuel Johnson",
         tipo: "web",
-        imgportada: "img/sj/portada.jpg",
+        imgportada: "img/sj/Inicio.jpg",
         description: `Página web desarrollada para la academia de inglés Samuel Johnson English Academy con el cual se muestra la información del rubro, su comunidad y forma de contactar. Además
             se segmentó el chat de su página de Facebook para el contacto inmediato así como su ubicación en el mapa con Google.
             Las tecnologías usadas son Javascript con jQuery, HTML5, CSS3 y librería Bootstrap`,
@@ -54,7 +54,7 @@ let data = [
     {
         titulo: "Préstamos Richard",
         tipo: "web",
-        imgportada: "img/prestamos/portada2.jpg",
+        imgportada: "img/prestamos/portada.jpg",
         description: `Porgrama de escritorio para prestamista el cual puede registrar clientes, prestamos acorde a días, semanas o meses y sus respectivos pagos.
             Está desarrollada en Java conectada a una base de datos local en PostgreSQL`,
         imggallery: ["img/prestamos/cliente.jpg", "img/prestamos/prestamo.jpg", "img/prestamos/pago.jpg"],
