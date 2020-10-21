@@ -446,7 +446,6 @@ figure .imgweb {
     transition: all 500ms ease-out;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 figure .imgapp {
@@ -454,7 +453,6 @@ figure .imgapp {
     padding-left: 27%;
     width: 73%;
     height: 100%;
-    object-fit: cover;
 }
 
 figure .capa {
