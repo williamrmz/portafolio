@@ -85,8 +85,8 @@ function cards() {
                                             ? ` class="cargando imgweb"`
                                             : `class="cargando imgapp"`
                                     }
-                                    src="${project.imgportada}"
-                                    srcset="${project.imgportada} 600, ${project.imgportada} 400"
+                                    src="${project.imgportada}" 
+                                    srcset="${project.imgportada} 600w, ${project.imgportada} 400w" 
                                     alt="${project.titulo}">
                                     <div class="capa">
                                         <h3>${project.titulo}</h3>
